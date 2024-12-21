@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: #f5f5f5;
+}
+
+section {
+    padding: 20px 15%;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+.home {
+    min-height: 90vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(./images/1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 230px;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 40px;
+    font-style: italic;
+    font-family: 'Anton', sans-serif;
+    position: relative; /* Permet de déplacer l'élément par rapport à sa position normale */
+    left: -50px; /* Décale le logo de 50px vers la gauche */
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links li {
+    margin: 20px;
+}
+
+.links li a  {
+    color: #fff;
+    position: relative;
+}
+.links li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: #94580a;
+    height: 4px;
+    width: 0%;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.links li a:hover:after {
+    width: 100%;
+}
+
+/* contenu de la page */ 
+.home_page_content {
+    position: absolute;
+    bottom: 60px;
+}
+
+.home_page_content span {
+    display: flex;
+    align-items: center;
+}
+.home_page_content span i {
+    color: #f9ad4a;
+    margin-right: 15px
+}
+.home_page_content span p {
+    color: #fff;
+    font-weight: bold;
+}
+.home_page_content h1 {
+    margin: 20px 0;
+    font-size: 70px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+}
+.home_page_content .text {
+    color: #b5b5b5;
+    margin-bottom: 30px;
+}
+.white_btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px 30px;
+    transition: 0.5;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+.white_btn:hover  {
+    background-color: #fff;
+    color: black;
+}
+.white_btn i {
+    margin-left: 20px;
+}
+
+/* image_box */
+
+.image_box {
+    position: absolute;
+    bottom: -140px;
+    right: 15%;
+}
+
+.image_box img {
+    border-radius: 6px;
+    width: 600px;
+    height: 500px;
+    object-fit: cover;
+    box-shadow: 0 32px 88px -32px rgba(0, 0, 0,.24);
+}
+
+.image_box p {
+    margin-top: 20px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.image_box i {
+    color: #94580a;
+    margin-right: 15px;
+}
+
+/* text section */ 
+.text_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.text_section p {
+    position: absolute;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    color: red;
+    z-index: -10;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.text_section h2 {
+    font-size: 30px;
+}
+
+/* owner */ 
+.owner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px; /* Ajoute un espace de 30px entre l'image et le contenu */
+    width: 100%;
+    margin: 120px 0;
+    height: auto; /* Ajuste automatiquement la hauteur */
+} 
+.image_box_owner {
+    width: 45%; /* Donne 45% de largeur à l'image */
+    height: 100%; /* S'assure que l'image prend toute la hauteur disponible */
+}
+
+.image_box_owner img {
+    width: 100%; /* L'image occupe toute la largeur disponible */
+    height: 100%; /* L'image occupe toute la hauteur disponible */
+    object-fit: cover; /* S'assure que l'image conserve son ratio sans déformation */
+    border-radius: 6px;
+    box-shadow: 0 32px 88px -32px rgba(0, 0, 0, .24);
+}
+
+.content_box {
+    width: 45%; /* Le contenu texte prend 45% de la largeur */
+}
+
+.small_title {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    position: relative;
+    width: fit-content;
+}
+
+.small_title:before {
+    content: "";
+    position: absolute;
+    background-color: #94580a;
+    left: -65px;
+    bottom: 10px;
+    width: 50px;
+    height: 2px;
+    border-radius: 6px;
+}
+
+.big_title {
+    margin: 20px 0;
+    font-size: 40px;
+    line-height: 40px;
+}
+.text{
+    margin-bottom: 20px;
+}
+.dark_btn {
+    color: black;
+    border: 1px solid black;
+}
+
+.content_box button {
+    margin-top: 30px;
+}
+
+.dark_btn:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.image_box_owner p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.content_box p {
+    margin-top: 20px;
+}
+
+/* backrounf*/
+.background {
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 200px;
+}
+.background .image {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+    animation: infinite animation1;
+    animation-duration: 50s;
+}
+@keyframes animation1 {
+    from {
+        transform: scale(1);
+    }to {
+        transform: scale(2);
+    }
+}
+.text-box {
+    position: absolute;
+    right: 15%;
+    bottom: -100px;
+    z-index: 10;
+    width: 450px;
+    background-color: #fff;
+    box-shadow: 0 32px 88px -32px rgba(0, 0, 0,.24);
+    padding: 45px;
+    border-radius: 6px;
+}
+.text-box span {
+    font-weight: bold;
+}
+
+.text-box h3 {
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+.text-box p {
+    margin-bottom: 25px;
+}
+.text-box h6 {
+    font-size: 14px;
+    margin:  15px 0;
+}
+.text-box i {
+    margin-right: 10px;
+    color: #94580a;
+}
+.text-box button{
+    margin-top: 45px;
+}
+.text-box button i {
+    color: black  ;
+}
+.text-box button:hover i {
+    color: #fff;
+}
+
+/* Styles pour les chapitres en boîtes */
+/* Styles pour les chapitres en boîtes */
+.chapters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.chapter_box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 40px); /* Ajuster la largeur pour trois boîtes par ligne */
+    box-sizing: border-box;
+}
+
+.chapter_box h2, .chapter_box h3 {
+    margin-bottom: 15px;
+}
+
+.chapter_box p, .chapter_box ol, .chapter_box ul {
+    margin-bottom: 15px;
+}
+
+.chapter_box ol, .chapter_box ul {
+    padding-left: 20px;
+}
+/* big */ 
+.big {
+    margin: 290px 0;
+    margin-bottom:  50px;
+}
+
+.big p {
+    font-size: 60px;
+    line-height: 80px;
+    color: #f5f5f5;
+}
+.big h2 {
+    font-size: 80px;
+}
+
+/* sservices */
+
+/* services container */
+.services {
+    display: flex;
+    justify-content: space-around; /* or space-between if you prefer */
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+/* each box */
+.services .box {
+    background-color: #fff; /* Optionnel pour la visibilité */
+    padding: 20px;
+    margin: 15px;
+    width: calc(33.333% - 30px); /* Adjust width to fit 3 per row */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optionnel pour un effet d'ombre */
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box; /* Pour éviter les dépassements à cause des padding/marges */
+}
+
+.services .box i {
+    font-size: 50px; /* Ajustez selon vos préférences */
+    color: #94580a;  /* Optionnel */
+    margin-bottom: 20px;
+}
+
+.services .box h2 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.services .box p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* apprentissage */ 
+
+/* Apprentissage Section */
+.apprentissage {
+    margin: 120px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Ajout d'un espace entre les colonnes gauche et droite */
+}
+
+/* Commentaires */
+.comment {
+    padding: 50px;
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-bottom: 30px; /* Ajout d'une marge pour espacer les commentaires */
+    box-shadow: 0 32px 80px -32px rgba(0, 0, 0, .24);
+}
+
+.comment img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.profil {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.down {
+    margin-bottom: 55px;
+}
+
+.footer {
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte en blanc */
+    text-align: center; /* Centrer le texte */
+    padding: 20px 0; /* Espacement interne */
+    position: relative; /* Position relative, il suit le flux du document */
+    width: 100%; /* S'assure que le footer prenne toute la largeur de l'écran */
+    font-size: 14px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    margin-top: 50px; /* Ajoute un espace avant le footer, pour le séparer du contenu */
+}
